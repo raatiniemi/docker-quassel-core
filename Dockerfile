@@ -5,5 +5,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     && apt-get install -y quassel-core
 
 EXPOSE 4242
+VOLUME "/var/lib/quassel"
 
-CMD ["quasselcore"]
+CMD ["quasselcore", "--configdir=/var/lib/quassel/"]
