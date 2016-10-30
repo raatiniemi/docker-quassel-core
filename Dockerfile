@@ -8,5 +8,6 @@ USER quasselcore
 
 EXPOSE 4242
 VOLUME "/var/lib/quassel"
+WORKDIR "/var/lib/quassel"
 
 CMD ["quasselcore", "--configdir=/var/lib/quassel/"]
